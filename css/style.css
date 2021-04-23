@@ -1,0 +1,1400 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+:root {
+    --title: 'Antonio', sans-serif;
+    --txt: 'Nunito', sans-serif;
+    --colorI: #feb748;
+    --fzh1: 4.25rem;
+    --fzh2: 3.4rem;
+    --fzp: 2rem;
+    --fza: 1.2rem;
+    --fzaII: 1.5rem;
+    font-size: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    user-select: none;
+    width: 100vw;
+}
+
+
+
+/* Seccion Cero (Hero) */
+main {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 7.5vw 10vh 7.5vw;
+    margin-bottom: 15vh;
+}
+
+.header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.header__logo {
+    height: 90%;
+}
+
+.header__bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__bar a {
+    font-size: var(--fza);
+    font-family: var(--title);
+    margin-left: 5vw;
+    letter-spacing: 0.05rem;
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0%);
+}
+
+.header__bar a:hover {
+    border: 1px solid var(--colorI);
+}
+
+.menu_btn {
+    display: none;
+}
+
+/* ------------------------------ */
+
+.hero {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20vh;
+}
+
+.hero__title {
+    font-family: var(--title);
+    font-size: var(--fzh1);
+    letter-spacing: 0.05rem;
+    margin-bottom: 2%;
+    color: black;
+}
+
+.hero__txt {
+    font-family: var(--txt);
+    font-size: var(--fzp);
+    margin-bottom: 10%;
+    color: black;
+}
+
+.hero__btn a {
+    font-family: var(--title);
+    letter-spacing: 0.15rem;
+    color: black;
+    font-size: var(--fza);
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 2px solid var(--colorI);
+    margin-right: 2rem;
+    background-color: rgba(255, 255, 255, 0%);
+    box-shadow: 2px 2px 10px #777;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.hero__btn a:hover {
+    transform: scale(1.1);
+}
+
+/* ------------------------------ */
+
+.circle {
+    height: 90vh;
+    width: 90vh;
+    background-color: var(--colorI);
+    border-radius: 100%;
+    position: absolute;
+    right: -8%;
+    bottom: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 55vh;
+    height: 55vh;
+    transform: rotate(-25deg);
+}
+
+
+
+/* Seccion Uno (About) */
+.Seccion_I {
+    width: 100%;
+    padding: 10vh 7.5vw 10vh 7.5vw;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "title txt";
+    grid-template-columns: 1fr 1fr;
+    background: rgb(254,183,72);
+    background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
+}
+
+.Seccion_I h1 {
+    grid-area: title;
+    font-family: var(--title);
+    text-align: center;
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh1);
+    justify-self: self-start;
+}
+
+.Seccion_I p {
+    grid-area: txt;
+    font-family: var(--txt);
+    font-size: var(--fzp);
+}
+
+
+
+/* Seccion Dos (Productos) */
+.Seccion_II {
+    height: fit-content;
+    padding: 10vh 7.5vw;
+}
+
+.Seccion_II--title {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh1);
+    text-align: center;
+}
+
+.Seccion_II__content {
+    width: 100%;
+    padding: 10vh 0 0;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "title txt";
+    grid-template-columns: 1fr 1fr;
+}
+
+.Seccion_II__content h2 {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh2);
+    grid-area: title;
+}
+
+.Seccion_II__content--txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: txt;
+}
+
+.Seccion_II__content--txt p {
+    font-family: var(--txt);
+    font-size: var(--fzp);
+    margin-bottom: 5vh;
+}
+
+.Seccion_II__content--txt a {
+    font-family: var(--title);
+    letter-spacing: 0.15rem;
+    color: black;
+    font-size: var(--fza);
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 2px solid var(--colorI);
+    margin-right: 2rem;
+    background-color: rgba(255, 255, 255, 0%);
+    box-shadow: 2px 2px 10px #777;
+    font-weight: 500;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.Seccion_II__content--txt a:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Seccion Tres (Galeria) */
+.Seccion_III {
+    position: relative;
+    padding: 10vh 7.5vw;
+    background: rgb(254,183,72);
+    background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
+}
+
+.Seccion_III img {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    height: 50%;
+}
+
+.Seccion_III__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "vacio title"
+    "btn txt";
+}
+
+.Seccion_III__content h2 {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh2);
+    grid-area: title;
+    margin-bottom: 15vh;
+    align-self: center;
+    justify-self: center;
+}
+
+.Seccion_III__content p {
+    font-family: var(--txt);
+    font-size: var(--fzp);
+    grid-area: txt;
+}
+
+.Seccion_III__content a {
+    font-family: var(--title);
+    letter-spacing: 0.15rem;
+    color: black;
+    font-size: var(--fza);
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 2px solid var(--colorI);
+    margin-right: 2rem;
+    background-color: rgba(255, 255, 255, 100%);
+    box-shadow: 2px 2px 10px #777;
+    font-weight: 500;
+    align-self: flex-start;
+    display: inline-block;
+    grid-area: btn;
+    align-self: flex-end;
+    justify-self: center;
+    z-index: 2;
+}
+
+.Seccion_III__content a:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Seccion Cuatro (Delivery) */
+.Seccion_IV {
+    padding: 10vh 7.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "title bike"
+    "txt bike";
+}
+
+.Seccion_IV h2 {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh2);
+    grid-area: title;
+    margin-bottom: 15vh;
+    justify-self: flex-start;
+}
+
+.Seccion_IV p {
+    font-family: var(--txt);
+    font-size: var(--fzp);
+    grid-area: txt;
+}
+
+.Seccion_IV img {
+    width: 100%;
+    grid-area: bike;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+/* Seccion Cinco (Contacto) */
+.Seccion_V {
+    position: relative;
+    padding: 10vh 7.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(254,183,72);
+    background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
+}
+
+.Seccion_V h1 {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: var(--fzh1);
+    text-align: center;
+}
+
+.Seccion_V__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10vh 0 0;
+}
+
+.Seccion_V__content div {
+    margin-bottom: 10vh;
+    display: flex;
+}
+
+.Seccion_V__content h4 {
+    font-family: var(--title);
+    letter-spacing: 0.05rem;
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.Seccion_V__content a {
+    font-family: var(--txt);
+    font-size: var(--fzp);
+    user-select: text;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Seccion Footer */
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    padding: 2vh;
+    font-family: var(--txt);
+    font-size: var(--fza);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* ------------------------- Mobile Version ------------------------- */
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+/* Seccion Cero (Hero) */
+    :root {
+    font-size: 8px;
+    }
+
+    main {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 7.5vw 6vh 7.5vw;
+    overflow-x: hidden;
+    margin: 0;
+    }
+
+    .header {
+    height: 10vh;
+    }
+
+    .header__logo {
+    height: 70%;
+    }
+
+    .header__bar {
+    display: none;
+    }
+
+    .menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 5vh;
+    background-color: white;
+    top: 2.5vh;
+    right: 7.5vw;
+    position: fixed;
+    z-index: 3;
+    }
+
+    .menu_btn img {
+    width: 75%;
+    }
+
+    /* ------------------------------ */
+    .hero {
+    position: relative;
+    height: 40vh;
+    padding-top: 7vh;
+    }
+
+    .hero__btn {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .hero__btn a {
+    font-size: var(--fzaII);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px #777;
+    text-align: center;
+    }
+    /* ------------------------------ */
+
+    .circle {
+    height: calc(85vw * 0.6);
+    width: 60%;
+    position: absolute;
+    right: -25%;
+    bottom: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .circle img {
+    width: 70%;
+    height: 70%;
+    transform: rotate(-20deg);
+    }
+
+
+
+/* Seccion Uno (About) */
+    .Seccion_I {
+    padding: 6vh 7.5vw;
+    grid-template-areas: 
+    "title"
+    "txt";
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    }
+
+    .Seccion_I h1 {
+        font-size: var(--fzh2);
+    }
+
+
+
+/* Seccion Dos (Productos) */
+    .Seccion_II {
+        height: fit-content;
+        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
+    }
+
+    .Seccion_II--title {
+        display: none;
+    }
+
+    .Seccion_II__content {
+        padding: 0;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+
+    .Seccion_II__content h2 {
+        font-size: var(--fzh2);
+    }
+
+    .Seccion_II__content--txt p {
+        font-size: var(--fzp);
+        margin-bottom: 3rem;
+    }
+
+    .Seccion_II__content--txt a {
+        font-size: var(--fzaII);
+        padding: 1rem 2rem;
+    }
+
+
+
+/* Seccion Tres (Galeria) */
+    .Seccion_III {
+        padding: 6vh 7.5vw;
+        overflow-x: hidden;
+    }
+
+    .Seccion_III img {
+        position: absolute;
+        top: unset;
+        bottom: 6%;
+        left: 55%;
+        width: 41%;
+        height: calc(41vw * 0.549);
+    }
+
+    .Seccion_III__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+    }
+
+    .Seccion_III__content h2 {
+        font-size: var(--fzh2);
+        margin-bottom: 3rem;
+        justify-self: flex-start;
+    }
+
+    .Seccion_III__content p {
+        margin-bottom: 3rem;
+    }
+
+    .Seccion_III__content a {
+        font-size: var(--fzaII);
+        padding: 1rem 2rem;
+        justify-self: flex-start;
+    }
+
+
+
+/* Seccion Cuatro (Delivery) */
+    .Seccion_IV {
+    padding: 6vh 7.5vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+    "title"
+    "txt"
+    "bike";
+    }
+
+    .Seccion_IV h2 {
+    margin-bottom: 3rem;
+    justify-self: flex-start;
+    }
+
+    .Seccion_IV p {
+        margin-bottom: 3rem;
+    }
+
+
+
+/* Seccion Cinco (Contacto) */
+    .Seccion_V {
+        padding: 6vh 7.5vw 8vh 7.5vw;
+    }
+
+    .Seccion_V h1 {
+        width: 100%;
+        font-size: var(--fzh2);
+        text-align: start;
+    }
+
+    .Seccion_V__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 6vh 0 0;
+    }
+
+    .Seccion_V__content div {
+        margin-bottom: 3rem;
+        display: flex;
+    }
+
+    .Seccion_V__content h4 {
+        font-size: var(--fzp);
+    }
+
+    .Seccion_V__content a {
+        font-size: var(--fzp);
+    }
+
+
+
+/* Seccion Footer */
+    footer a {
+        font-size: var(--fzp);
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
+
+/* Seccion Cero (Hero) */
+    :root {
+    font-size: 14px;
+    }
+
+    main {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 7.5vw 6vh 7.5vw;
+    overflow-x: hidden;
+    margin: 0;
+    }
+
+    .header {
+    height: 10vh;
+    }
+
+    .header__logo {
+    height: 70%;
+    }
+
+    .header__bar {
+    display: none;
+    }
+
+    .menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 5vh;
+    background-color: white;
+    top: 2.5vh;
+    right: 7.5vw;
+    position: fixed;
+    z-index: 3;
+    }
+
+    .menu_btn img {
+    width: 75%;
+    }
+
+    /* ------------------------------ */
+    .hero {
+    position: relative;
+    height: fit-content;
+    padding-top: 7vh;
+    }
+
+    .hero__btn {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .hero__btn a {
+    font-size: var(--fzaII);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px #777;
+    text-align: center;
+    }
+    /* ------------------------------ */
+
+    .circle {
+    height: calc(85vw * 0.6);
+    width: 60%;
+    position: absolute;
+    right: -25%;
+    bottom: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .circle img {
+    width: 70%;
+    height: 70%;
+    transform: rotate(-20deg);
+    }
+
+
+
+/* Seccion Uno (About) */
+    .Seccion_I {
+    padding: 6vh 7.5vw;
+    grid-template-areas: 
+    "title"
+    "txt";
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    }
+
+    .Seccion_I h1 {
+        font-size: var(--fzh2);
+    }
+
+
+
+/* Seccion Dos (Productos) */
+    .Seccion_II {
+        height: fit-content;
+        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
+    }
+
+    .Seccion_II--title {
+        display: none;
+    }
+
+    .Seccion_II__content {
+        padding: 0;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+
+    .Seccion_II__content h2 {
+        font-size: var(--fzh2);
+    }
+
+    .Seccion_II__content--txt p {
+        font-size: var(--fzp);
+        margin-bottom: 3rem;
+    }
+
+    .Seccion_II__content--txt a {
+        font-size: var(--fzaII);
+        padding: 1rem 2rem;
+    }
+
+
+
+/* Seccion Tres (Galeria) */
+    .Seccion_III {
+        padding: 6vh 7.5vw;
+        overflow-x: hidden;
+    }
+
+    .Seccion_III img {
+        position: absolute;
+        top: unset;
+        bottom: 6%;
+        left: 55%;
+        width: 41%;
+        height: calc(41vw * 0.549);
+    }
+
+    .Seccion_III__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+    }
+
+    .Seccion_III__content h2 {
+        font-size: var(--fzh2);
+        margin-bottom: 3rem;
+        justify-self: flex-start;
+    }
+
+    .Seccion_III__content p {
+        margin-bottom: 3rem;
+        width: 75%;
+    }
+
+    .Seccion_III__content a {
+        font-size: var(--fzaII);
+        padding: 1rem 2rem;
+        justify-self: flex-start;
+    }
+
+
+
+/* Seccion Cuatro (Delivery) */
+    .Seccion_IV {
+    padding: 6vh 7.5vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+    "title"
+    "txt"
+    "bike";
+    }
+
+    .Seccion_IV h2 {
+    margin-bottom: 3rem;
+    justify-self: flex-start;
+    }
+
+    .Seccion_IV p {
+        margin-bottom: 3rem;
+    }
+
+
+
+/* Seccion Cinco (Contacto) */
+    .Seccion_V {
+        padding: 6vh 7.5vw 8vh 7.5vw;
+    }
+
+    .Seccion_V h1 {
+        width: 100%;
+        font-size: var(--fzh2);
+        text-align: start;
+    }
+
+    .Seccion_V__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 6vh 0 0;
+    }
+
+    .Seccion_V__content div {
+        margin-bottom: 3rem;
+        display: flex;
+    }
+
+    .Seccion_V__content h4 {
+        font-size: var(--fzp);
+    }
+
+    .Seccion_V__content a {
+        font-size: var(--fzp);
+    }
+
+
+
+/* Seccion Footer */
+    footer a {
+        font-size: var(--fzp);
+    }
+
+}
+
+@media only screen and (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+
+/* Seccion Cero (Hero) */
+    :root {
+    font-size: 10px;
+    }
+
+    main {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 5vw 6vh 5vw;
+    overflow-x: hidden;
+    margin: 0;
+    }
+
+    .header {
+    height: 15vh;
+    }
+
+    .header__logo {
+    height: 70%;
+    }
+
+    .header__bar {
+    display: none;
+    }
+
+    .header__bar a {
+        font-size: var(--fzaII);
+        font-family: var(--title);
+        margin-left: 1vw;
+        letter-spacing: 0.05rem;
+        color: black;
+        text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0%);
+    }
+    
+    .menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 8vh;
+    background-color: white;
+    top: 3.5vh;
+    right: 7.5vw;
+    position: fixed;
+    z-index: 3;
+    }
+
+    .menu_btn img {
+    width: 60%;
+    }
+
+    /* ------------------------------ */
+    .hero {
+    position: relative;
+    height: fit-content;
+    padding-top: 7vh;
+    }
+
+    .hero__btn {
+    display: flex;
+    flex-direction: row;
+    }
+
+    .hero__btn a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px #777;
+    text-align: center;
+    }
+    /* ------------------------------ */
+
+    .circle {
+    height: calc(85vw * 0.45);
+    width: 45%;
+    position: absolute;
+    right: -15%;
+    bottom: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .circle img {
+    width: 70%;
+    height: 70%;
+    transform: rotate(-20deg);
+    }
+
+
+
+/* Seccion Uno (About) */
+    .Seccion_I {
+    padding: 6vh 7.5vw;
+    grid-template-areas: 
+    "title"
+    "txt";
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    }
+
+    .Seccion_I h1 {
+        font-size: var(--fzh2);
+    }
+
+
+
+/* Seccion Dos (Productos) */
+    .Seccion_II {
+        height: fit-content;
+        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
+    }
+
+    .Seccion_II--title {
+        display: none;
+    }
+
+    .Seccion_II__content {
+        padding: 0;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+
+    .Seccion_II__content h2 {
+        font-size: var(--fzh2);
+    }
+
+    .Seccion_II__content--txt p {
+        font-size: var(--fzp);
+        margin-bottom: 3rem;
+    }
+
+    .Seccion_II__content--txt a {
+        font-size: var(--fzaII);
+        padding: 1rem 1.5rem;
+    }
+
+
+
+/* Seccion Tres (Galeria) */
+    .Seccion_III {
+        padding: 6vh 7.5vw;
+        overflow-x: hidden;
+    }
+
+    .Seccion_III img {
+        position: absolute;
+        top: unset;
+        bottom: 6%;
+        left: 55%;
+        width: 41%;
+        height: calc(41vw * 0.549);
+    }
+
+    .Seccion_III__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+    }
+
+    .Seccion_III__content h2 {
+        font-size: var(--fzh2);
+        margin-bottom: 3rem;
+        justify-self: flex-start;
+    }
+
+    .Seccion_III__content p {
+        margin-bottom: 3rem;
+        width: 65%;
+    }
+
+    .Seccion_III__content a {
+        font-size: var(--fzaII);
+        padding: 1rem 1.5rem;
+        justify-self: flex-start;
+    }
+
+
+
+/* Seccion Cuatro (Delivery) */
+    .Seccion_IV {
+    padding: 6vh 7.5vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+    "title"
+    "txt"
+    "bike";
+    }
+
+    .Seccion_IV h2 {
+    margin-bottom: 3rem;
+    justify-self: flex-start;
+    }
+
+    .Seccion_IV p {
+        margin-bottom: 3rem;
+    }
+
+
+
+/* Seccion Cinco (Contacto) */
+    .Seccion_V {
+        padding: 6vh 7.5vw 8vh 7.5vw;
+    }
+
+    .Seccion_V h1 {
+        width: 100%;
+        font-size: var(--fzh2);
+        text-align: start;
+    }
+
+    .Seccion_V__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 6vh 0 0;
+    }
+
+    .Seccion_V__content div {
+        margin-bottom: 3rem;
+        display: flex;
+    }
+
+    .Seccion_V__content h4 {
+        font-size: var(--fzp);
+    }
+
+    .Seccion_V__content a {
+        font-size: var(--fzp);
+    }
+
+
+
+/* Seccion Footer */
+    footer a {
+        font-size: var(--fzp);
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) and (orientation: landscape) {
+
+/* Seccion Cero (Hero) */
+    :root {
+    font-size: 20px;
+    }
+
+    main {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 5vw 6vh 5vw;
+    overflow-x: hidden;
+    margin: 0;
+    }
+
+    .header {
+    height: 15vh;
+    }
+
+    .header__logo {
+    height: 70%;
+    }
+
+    .header__bar {
+    display: flex;
+    }
+
+    .header__bar a {
+        font-size: var(--fzaII);
+        font-family: var(--title);
+        margin-left: 1vw;
+        letter-spacing: 0.05rem;
+        color: black;
+        text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0%);
+    }
+    
+    .menu_btn {
+    display: none;
+    }
+
+    /* ------------------------------ */
+    .hero {
+    position: relative;
+    height: fit-content;
+    padding-top: 7vh;
+    }
+
+    .hero__btn {
+    display: flex;
+    flex-direction: row;
+    }
+
+    .hero__btn a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px #777;
+    text-align: center;
+    }
+    /* ------------------------------ */
+
+    .circle {
+    height: calc(85vw * 0.45);
+    width: 45%;
+    position: absolute;
+    right: -15%;
+    bottom: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .circle img {
+    width: 70%;
+    height: 70%;
+    transform: rotate(-20deg);
+    }
+
+
+
+/* Seccion Uno (About) */
+    .Seccion_I {
+    padding: 6vh 7.5vw;
+    grid-template-areas: 
+    "title"
+    "txt";
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    }
+
+    .Seccion_I h1 {
+        font-size: var(--fzh2);
+    }
+
+
+
+/* Seccion Dos (Productos) */
+    .Seccion_II {
+        height: fit-content;
+        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
+    }
+
+    .Seccion_II--title {
+        display: none;
+    }
+
+    .Seccion_II__content {
+        padding: 0;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+
+    .Seccion_II__content h2 {
+        font-size: var(--fzh2);
+    }
+
+    .Seccion_II__content--txt p {
+        font-size: var(--fzp);
+        margin-bottom: 3rem;
+    }
+
+    .Seccion_II__content--txt a {
+        font-size: var(--fzaII);
+        padding: 1rem 1.5rem;
+    }
+
+
+
+/* Seccion Tres (Galeria) */
+    .Seccion_III {
+        padding: 6vh 7.5vw;
+        overflow-x: hidden;
+    }
+
+    .Seccion_III img {
+        position: absolute;
+        top: unset;
+        bottom: 6%;
+        left: 55%;
+        width: 41%;
+        height: calc(41vw * 0.549);
+    }
+
+    .Seccion_III__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas: 
+        "title"
+        "txt"
+        "btn";
+    }
+
+    .Seccion_III__content h2 {
+        font-size: var(--fzh2);
+        margin-bottom: 3rem;
+        justify-self: flex-start;
+    }
+
+    .Seccion_III__content p {
+        margin-bottom: 3rem;
+        width: 65%;
+    }
+
+    .Seccion_III__content a {
+        font-size: var(--fzaII);
+        padding: 1rem 1.5rem;
+        justify-self: flex-start;
+    }
+
+
+
+/* Seccion Cuatro (Delivery) */
+    .Seccion_IV {
+    padding: 6vh 7.5vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+    "title"
+    "txt"
+    "bike";
+    }
+
+    .Seccion_IV h2 {
+    margin-bottom: 3rem;
+    justify-self: flex-start;
+    }
+
+    .Seccion_IV p {
+        margin-bottom: 3rem;
+    }
+
+
+
+/* Seccion Cinco (Contacto) */
+    .Seccion_V {
+        padding: 6vh 7.5vw 8vh 7.5vw;
+    }
+
+    .Seccion_V h1 {
+        width: 100%;
+        font-size: var(--fzh2);
+        text-align: start;
+    }
+
+    .Seccion_V__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 6vh 0 0;
+    }
+
+    .Seccion_V__content div {
+        margin-bottom: 3rem;
+        display: flex;
+    }
+
+    .Seccion_V__content h4 {
+        font-size: var(--fzp);
+    }
+
+    .Seccion_V__content a {
+        font-size: var(--fzp);
+    }
+
+
+
+/* Seccion Footer */
+    footer a {
+        font-size: var(--fzp);
+    }
+
+}
