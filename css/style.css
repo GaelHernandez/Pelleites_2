@@ -590,8 +590,7 @@ footer a {
         font-size: var(--fzaII);
         padding: 1rem 2rem;
         justify-self: flex-start;
-        min-width: fit-content;
-        text-align: center;
+        text-align: start;
     }
 
 
