@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landscape.css">
+    <link rel="stylesheet" href="css/portrait.css">
+    <script src="https://kit.fontawesome.com/4cb03296f3.js" crossorigin="anonymous"></script>
     <title>Pelleite's</title>
 </head>
 <body>
@@ -24,19 +27,19 @@
             </div>
 
             <div class="menu_btn">
-                <img src="icon/Menu.svg" alt="">
+                <div class="menu_btn-img" id="menu_btn" onclick="cambio()"></div>
             </div>
         </header>
 
 
         <div class="hero">
-            <h1 class="hero__title">LO DULCE DE SERVIR</h1>
+            <h1 class="hero__title">Lo dulce de servir</h1>
 
             <p class="hero__txt">Brigadeiros Gourmet</p>
 
             <div class="hero__btn">
-                <a href="#contacto">CONTACTANOS</a>
-                <a href="#productos">PRODUCTOS</a>
+                <a href="#contacto">Contactanos</a>
+                <a href="#productos">Productos</a>
             </div>
 
             <div class="circle">
@@ -44,58 +47,56 @@
             </div>
         </div>
         
+        
+        <div class="menu" id="menu">
+            <a href="#about" onclick="cambio()">¿Quienes Somos?</a>
+            <a href="#productos" onclick="cambio()">Productos</a>
+            <a href="#galeria" onclick="cambio()">Galeria</a>
+            <a href="#contacto">Contacto</a>   
+        </div>
     </main>
-
 
 
     <!-- Seccion Uno (About) -->
     <section class="Seccion_I" id="about">
-            <h1>¿Quiénes <br>Somos?</h1>
+            <h1>¿Quiénes Somos?</h1>
 
             <p>Somos una empresa de reposteria y chocolateria dedicada a la produccion de brigadeiros y la preparacion de arreglos decorativos.</p>
     </section>
 
 
-
     <!-- Seccion Dos (Productos) -->
     <section class="Seccion_II" id="productos">
 
-        <h1 class="Seccion_II--title">PRODUCTOS</h1>        
 
-        <div class="Seccion_II__content">
-            <h2>¿Que son los <br>brigadeiros?</h2>
+        <h2>Nuestros Productos</h2>
 
-            <div class="Seccion_II__content--txt">
-
-                <p>Son un dulce tipico en la cultura gastronomica de Brasil, es comun en todo la region y estan hechos a base de leche condensada y...</p>
-                <a href="">Ver mas</a>
-
-            </div>
+        <div class="Seccion_II--txt">
+            <p>Nos enfocamos en la preparacion de brigadeiros, un dulce tipico en la cultura gastronomica de Brasil, es comun en todo la region y estan hechos a base de leche condensada y...</p>
+            <a href="">Ver mas</a>
         </div>
 
     </section>
 
 
-
     <!-- Seccion Tres (Galeria) -->
-    <section class="Seccion_III">
+    <section class="Seccion_III" id="galeria">
         <div class="Seccion_III__content">
             <h2>Galería</h2>
             <p>Entra en nuestra galería y echa un vistazo a nuestros productos.</p>
-            <a href="">VER GALERÍA</a>
+            <a href="">Ver Galeria</a>
+            <img src="icon/Icon-II.png" alt="">
         </div>
-        <img src="icon/Icon-II.png" alt="">
     </section>
 
 
 
     <!-- Seccion Cuatro (Delivery) -->
     <section class="Seccion_IV">
-        <h2>DELIVERY</h2>
+        <h2>Delivery</h2>
         <p>Pregunta sobre las zonas que abarca nuestro servicio de entregas a domicilio.</p>
         <img src="icon/Bike.svg" alt="">
     </section>
-
 
 
     <!-- Seccion Cinco (Contacto) -->
@@ -104,23 +105,59 @@
 
         <div class="Seccion_V__content">
 
-            <div>
-                <h4>Correo: <a href="mailto:infopelleites@gmail.com">Infopelleites@gmail.com</a></h4>
+            <div class="Seccion_V__card">
+                <p>Siguenos en <br>Instagram</p>
+                <div>
+                    <a href="https://www.instagram.com/pelleites/" target="_blank">
+                    <span><i class="fab fa-instagram fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <h4>Instagram: <a href="https://www.instagram.com/pelleites/">@Pelleites</a></h4>
+            <div class="Seccion_V__card">
+                <p>Escribenos al <br>WhatsApp</p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=584147709992&text=Hola%2C+me+encantaria+disfrutar+de+sus+ricos+brigadeiros+😊&app_absent=0" target="_blank">
+                    <span><i class="fab fa-whatsapp fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <h4>WhatsApp: <a href="https://api.whatsapp.com/send?phone=584147709992&text=Hola%2C+me+encantaria+disfrutar+de+sus+ricos+brigadeiros+😊&app_absent=0">+58 414-770 9992</a></h4>   
+            <div class="Seccion_V__card">
+                <p>Comunicate al <br>infopelleites@gmail.com</p>
+                <div>
+                    <a href="mailto:infopelleites@gmail.com">
+                    <span><i class="far fa-envelope fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
-
         </div>
+
+
+
+
+
+
+        <!-- <div class="Seccion_V__content">
+
+            <div>
+                <h4> <i class="far fa-envelope fa-2x"></i> <a href="mailto:infopelleites@gmail.com">Infopelleites@gmail.com</a></h4>
+            </div>
+
+            <div>
+                <h4><i class="fab fa-instagram fa-2x"></i> <a href="https://www.instagram.com/pelleites/">@Pelleites</a></h4>
+            </div>
+
+            <div>
+                <h4><i class="fab fa-whatsapp fa-2x"></i> <a href="https://api.whatsapp.com/send?phone=584147709992&text=Hola%2C+me+encantaria+disfrutar+de+sus+ricos+brigadeiros+😊&app_absent=0">+58 414-770 9992</a></h4>   
+            </div>
+
+        </div> -->
 
         <footer>
             <a href="https://hernandezgabriel.com/" target="_blank">Gabriel Hernández 2021 ©</a>
         </footer>
     </section>
+    <script src="js/script.js"></script>
 </body>
 </html>

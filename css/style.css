@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+@font-face {
+    src: url(../font/AmsterdamOne.ttf);
+    font-family: 'pelleite';
+}
 
 :root {
-    --title: 'Antonio', sans-serif;
-    --txt: 'Nunito', sans-serif;
+    --title: 'pelleite', cursive;
+    --txt: 'Antonio', sans-serif;
+    --button: 'Antonio', sans-serif;
     --colorI: #feb748;
-    --fzh1: 4.25rem;
-    --fzh2: 3.4rem;
-    --fzp: 2rem;
-    --fza: 1.2rem;
+    --fzh1: 2.5rem;
+    --fzh2: 2rem;
+    --fzp: 1.5rem;
+    --fza: 1rem;
     --fzaII: 1.5rem;
     font-size: 25px;
 }
@@ -18,7 +25,6 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 html {
@@ -56,17 +62,18 @@ main {
 .header__bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
+    width: 65%;
 }
 
 .header__bar a {
     font-size: var(--fza);
-    font-family: var(--title);
-    margin-left: 5vw;
-    letter-spacing: 0.05rem;
+    font-family: var(--button);
+    white-space: nowrap;
     color: black;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0%);
 }
 
@@ -76,37 +83,93 @@ main {
 
 .menu_btn {
     display: none;
+    z-index: 10;
 }
+
+.menu_btn-img {
+    width: 75%;
+    height: 70%;
+    background-image: url(../icon/Menu.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+.act {
+    background-image: url(../icon/Close.svg);
+    background-size: cover;
+    background-position: center;
+    width: 75%;
+    height: 70%;
+    z-index: 10;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 60vw;
+    height: 100vh;
+    background-color: var(--colorI);
+    padding-top: 10vh;
+    padding-left: 5%;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    z-index: 2;
+}
+
+.menu a {
+    font-family: var(--txt);
+    color: white;
+    font-size: var(--fzp);
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+    border-top: 2px solid white;
+    width: 100%;
+}
+
+.act_2 {
+    left: 40%;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
 
 /* ------------------------------ */
 
 .hero {
     width: 100%;
-    height: 85vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 20vh;
+    padding-top: 15vh;
 }
 
 .hero__title {
     font-family: var(--title);
     font-size: var(--fzh1);
-    letter-spacing: 0.05rem;
-    margin-bottom: 2%;
     color: black;
+    font-weight: 100;
 }
 
 .hero__txt {
-    font-family: var(--txt);
+    font-family: var(--button);
     font-size: var(--fzp);
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     color: black;
 }
 
 .hero__btn a {
-    font-family: var(--title);
-    letter-spacing: 0.15rem;
+    font-family: var(--button);
     color: black;
     font-size: var(--fza);
     padding: 12px 20px;
@@ -149,7 +212,8 @@ main {
 /* Seccion Uno (About) */
 .Seccion_I {
     width: 100%;
-    padding: 10vh 7.5vw 10vh 7.5vw;
+    height: fit-content;
+    padding: 7vh 7.5vw;
     display: grid;
     align-items: center;
     grid-template-areas: "title txt";
@@ -161,50 +225,41 @@ main {
 .Seccion_I h1 {
     grid-area: title;
     font-family: var(--title);
-    text-align: center;
-    letter-spacing: 0.05rem;
-    font-size: var(--fzh1);
-    justify-self: self-start;
+    text-align: start;
+    font-size: var(--fzh2);
+    font-weight: 100;
 }
 
 .Seccion_I p {
     grid-area: txt;
     font-family: var(--txt);
     font-size: var(--fzp);
+    letter-spacing: 0.05rem;
+    font-weight: 200;
 }
 
 
 
 /* Seccion Dos (Productos) */
 .Seccion_II {
-    height: fit-content;
-    padding: 10vh 7.5vw;
-}
-
-.Seccion_II--title {
-    font-family: var(--title);
-    letter-spacing: 0.05rem;
-    font-size: var(--fzh1);
-    text-align: center;
-}
-
-.Seccion_II__content {
     width: 100%;
-    padding: 10vh 0 0;
+    height: fit-content;
+    padding: 7vh 7.5vw;
     display: grid;
     align-items: center;
     grid-template-areas: "title txt";
     grid-template-columns: 1fr 1fr;
 }
 
-.Seccion_II__content h2 {
+.Seccion_II h2 {
     font-family: var(--title);
-    letter-spacing: 0.05rem;
     font-size: var(--fzh2);
+    font-weight: 100;
     grid-area: title;
+    text-align: start;
 }
 
-.Seccion_II__content--txt {
+.Seccion_II--txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,15 +267,16 @@ main {
     grid-area: txt;
 }
 
-.Seccion_II__content--txt p {
+.Seccion_II--txt p {
     font-family: var(--txt);
     font-size: var(--fzp);
     margin-bottom: 5vh;
+    letter-spacing: 0.05rem;
+    font-weight: 200;
 }
 
-.Seccion_II__content--txt a {
-    font-family: var(--title);
-    letter-spacing: 0.15rem;
+.Seccion_II--txt a {
+    font-family: var(--button);
     color: black;
     font-size: var(--fza);
     padding: 12px 20px;
@@ -234,7 +290,7 @@ main {
     display: inline-block;
 }
 
-.Seccion_II__content--txt a:hover {
+.Seccion_II--txt a:hover {
     transform: scale(1.1);
 }
 
@@ -242,33 +298,26 @@ main {
 
 /* Seccion Tres (Galeria) */
 .Seccion_III {
-    position: relative;
-    padding: 10vh 7.5vw;
+    padding: 7vh 7.5vw;
     background: rgb(254,183,72);
     background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
-}
-
-.Seccion_III img {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    height: 50%;
 }
 
 .Seccion_III__content {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.25fr;
     grid-template-areas: 
-    "vacio title"
-    "btn txt";
+    "title title"
+    "txt img"
+    "vacio btn";
 }
 
 .Seccion_III__content h2 {
     font-family: var(--title);
-    letter-spacing: 0.05rem;
     font-size: var(--fzh2);
+    font-weight: 100;
     grid-area: title;
     margin-bottom: 15vh;
     align-self: center;
@@ -279,11 +328,17 @@ main {
     font-family: var(--txt);
     font-size: var(--fzp);
     grid-area: txt;
+    font-weight: 200;
+}
+
+.Seccion_III img {
+    height: 95%;
+    grid-area: img;
+    justify-self: center;
 }
 
 .Seccion_III__content a {
-    font-family: var(--title);
-    letter-spacing: 0.15rem;
+    font-family: var(--button);
     color: black;
     font-size: var(--fza);
     padding: 12px 20px;
@@ -309,7 +364,7 @@ main {
 
 /* Seccion Cuatro (Delivery) */
 .Seccion_IV {
-    padding: 10vh 7.5vw;
+    padding: 7vh 7.5vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -320,8 +375,8 @@ main {
 
 .Seccion_IV h2 {
     font-family: var(--title);
-    letter-spacing: 0.05rem;
     font-size: var(--fzh2);
+    font-weight: 100;
     grid-area: title;
     margin-bottom: 15vh;
     justify-self: flex-start;
@@ -330,6 +385,7 @@ main {
 .Seccion_IV p {
     font-family: var(--txt);
     font-size: var(--fzp);
+    font-weight: 200;
     grid-area: txt;
 }
 
@@ -345,57 +401,78 @@ main {
 /* Seccion Cinco (Contacto) */
 .Seccion_V {
     position: relative;
-    padding: 10vh 7.5vw;
+    padding: 7vh 7.5vw;
+    padding-bottom: calc(3vw + 4rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
     background: rgb(254,183,72);
     background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
 }
 
 .Seccion_V h1 {
     font-family: var(--title);
-    letter-spacing: 0.05rem;
     font-size: var(--fzh1);
+    font-weight: 100;
     text-align: center;
 }
 
 .Seccion_V__content {
+    padding-top: 5%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10vh 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "inst whats mail";
 }
 
-.Seccion_V__content div {
-    margin-bottom: 10vh;
-    display: flex;
+.Seccion_V__card {
+    width: 90%;
+    height: 100%;
+    box-shadow: 6px 6px 10px #888;
+    background-color: white;
 }
 
-.Seccion_V__content h4 {
-    font-family: var(--title);
-    letter-spacing: 0.05rem;
-    font-size: 3vw;
-    font-weight: 500;
-}
-
-.Seccion_V__content a {
-    font-family: var(--txt);
-    font-size: var(--fzp);
+.Seccion_V__card p {
+    font-family: var(--button);
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-align: center;
     user-select: text;
-    text-decoration: none;
-    color: black;
 }
 
+.Seccion_V__card div {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid white;
+    background-color: var(--colorI);
+    z-index: 2;
+}
+
+.Seccion_V__card a {
+    width: 2rem;
+    height: 2rem;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Seccion_V__card span {
+    color: white;
+    font-size: 2rem;
+}
 
 
 /* Seccion Footer */
 footer {
-    bottom: 0;
     position: absolute;
+    bottom: 0;
     width: 100%;
     border-top: 2px solid white;
     display: flex;
@@ -418,185 +495,155 @@ footer a {
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
 /* Seccion Cero (Hero) */
-    :root {
-    font-size: 8px;
-    }
+:root {
+    font-size: 10px;
+    --fzh1: 3rem;
+    --fzh2: 2.5rem;
+}
 
-    main {
+main {
     width: 100vw;
     height: fit-content;
     padding: 0 7.5vw 6vh 7.5vw;
     overflow-x: hidden;
     margin: 0;
-    }
+}
 
-    .header {
+.header {
     height: 10vh;
-    }
+}
 
-    .header__logo {
+.header__logo {
     height: 70%;
-    }
+}
 
-    .header__bar {
+.header__bar {
     display: none;
-    }
+}
 
-    .menu_btn {
+.menu_btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
-    width: 5vh;
+    height: 4vh;
+    width: 4vh;
     background-color: white;
-    top: 2.5vh;
+    top: 2vh;
     right: 7.5vw;
     position: fixed;
     z-index: 3;
-    }
+}
 
-    .menu_btn img {
+.menu_btn img {
     width: 75%;
-    }
+}
 
-    /* ------------------------------ */
-    .hero {
+.menu {
+    display: flex;
+}
+/* ------------------------------ */
+.hero {
     position: relative;
-    height: 40vh;
-    padding-top: 7vh;
-    }
+    height: 50vh;
+    padding-top: 10vh;
+}
 
-    .hero__btn {
+.hero__btn {
     display: flex;
     flex-direction: column;
-    }
+}
 
-    .hero__btn a {
+.hero__btn a {
     font-size: var(--fzaII);
-    padding: 1rem 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     box-shadow: 4px 4px 10px #777;
     text-align: center;
-    }
-    /* ------------------------------ */
-
-    .circle {
+}
+/* ------------------------------ */
+.circle {
     height: calc(85vw * 0.6);
     width: 60%;
     position: absolute;
     right: -25%;
-    bottom: -10%;
+    bottom: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+}
 
-    .circle img {
+.circle img {
     width: 70%;
     height: 70%;
     transform: rotate(-20deg);
-    }
+}
 
 
 
 /* Seccion Uno (About) */
-    .Seccion_I {
+.Seccion_I {
     padding: 6vh 7.5vw;
     grid-template-areas: 
     "title"
     "txt";
-    grid-gap: 3rem;
     grid-template-columns: 1fr;
-    }
+}
 
-    .Seccion_I h1 {
+.Seccion_I h1 {
         font-size: var(--fzh2);
-    }
-
-
+}
 
 /* Seccion Dos (Productos) */
-    .Seccion_II {
-        height: fit-content;
-        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
-    }
 
-    .Seccion_II--title {
-        display: none;
-    }
+.Seccion_II {
+    grid-template-areas: 
+    "title"
+    "txt";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+}
 
-    .Seccion_II__content {
-        padding: 0;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
-
-    .Seccion_II__content h2 {
-        font-size: var(--fzh2);
-    }
-
-    .Seccion_II__content--txt p {
-        font-size: var(--fzp);
-        margin-bottom: 3rem;
-    }
-
-    .Seccion_II__content--txt a {
-        font-size: var(--fzaII);
-        padding: 1rem 2rem;
-    }
-
+.Seccion_II--txt a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+}
 
 
 /* Seccion Tres (Galeria) */
-    .Seccion_III {
-        padding: 6vh 7.5vw;
-        overflow-x: hidden;
-    }
+.Seccion_III__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 10rem 5rem;
+    grid-template-areas: 
+    "title title"
+    "txt img"
+    "btn btn";
+    grid-gap: 2rem;
+}
 
-    .Seccion_III img {
-        position: absolute;
-        top: unset;
-        bottom: 6%;
-        left: 55%;
-        width: 41%;
-        height: calc(41vw * 0.549);
-    }
+.Seccion_III__content h2 {
+    margin-bottom: 0;
+    align-self: center;
+    justify-self: center;
+}
 
-    .Seccion_III__content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-    }
+.Seccion_III__content p {
+    align-self: center;
+}
 
-    .Seccion_III__content h2 {
-        font-size: var(--fzh2);
-        margin-bottom: 3rem;
-        justify-self: flex-start;
-    }
+.Seccion_III__content a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+}
 
-    .Seccion_III__content p {
-        margin-bottom: 3rem;
-    }
-
-    .Seccion_III__content a {
-        font-size: var(--fzaII);
-        padding: 1rem 2rem;
-        justify-self: flex-start;
-        text-align: start;
-    }
+.Seccion_III img {
+    height: 75%;
+    align-self: center;
+}
 
 
 
 /* Seccion Cuatro (Delivery) */
-    .Seccion_IV {
+.Seccion_IV {
     padding: 6vh 7.5vw;
     grid-template-columns: 1fr;
     grid-template-rows: none;
@@ -604,798 +651,300 @@ footer a {
     "title"
     "txt"
     "bike";
-    }
+}
 
-    .Seccion_IV h2 {
+.Seccion_IV h2 {
     margin-bottom: 3rem;
-    justify-self: flex-start;
-    }
+    justify-self: center;
+}
 
-    .Seccion_IV p {
+.Seccion_IV p {
         margin-bottom: 3rem;
-    }
-
-
+}
 
 /* Seccion Cinco (Contacto) */
-    .Seccion_V {
-        padding: 6vh 7.5vw 8vh 7.5vw;
-    }
+.Seccion_V {
+    position: relative;
+    padding: 7vh 7.5vw;
+    padding-bottom: calc(3vw + 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(254,183,72);
+    background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
+}
 
-    .Seccion_V h1 {
-        width: 100%;
-        font-size: var(--fzh2);
-        text-align: start;
-    }
+.Seccion_V h1 {
+    font-family: var(--title);
+    font-size: var(--fzh1);
+    font-weight: 100;
+    text-align: center;
+}
 
-    .Seccion_V__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 6vh 0 0;
-    }
+.Seccion_V__content {
+    padding-top: 5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "inst"
+    "whats"
+    "mail";
+    justify-items: center;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
 
-    .Seccion_V__content div {
-        margin-bottom: 3rem;
-        display: flex;
-    }
+.Seccion_V__card {
+    width: 50%;
+    height: 100%;
+    box-shadow: 6px 6px 10px #555;
+    background-color: white;
+}
 
-    .Seccion_V__content h4 {
-        font-size: var(--fzp);
-    }
+.Seccion_V__card p {
+    font-family: var(--button);
+    font-size: 100%;
+    font-weight: 200;
+    text-align: center;
+    user-select: text;
+}
 
-    .Seccion_V__content a {
-        font-size: var(--fzp);
-    }
+.Seccion_V__card div {
+    padding: 4rem;
+    display: flex;
+    border-top: 2px solid white;
+    background-color: var(--colorI);
+    z-index: 2;
+}
 
+.Seccion_V__card a {
+    display: inline-block;
+    height: 5.2rem;
+    width: 5.2rem;
+    z-index: 3;
+}
+
+.Seccion_V__card span {
+    color: white;
+    font-size: 2rem;
+}
 
 
 /* Seccion Footer */
-    footer a {
+footer a {
         font-size: var(--fzp);
-    }
-
+}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
 
 /* Seccion Cero (Hero) */
-    :root {
-    font-size: 14px;
-    }
+:root {
+font-size: 15px;
+}
 
-    main {
+main {
     width: 100vw;
     height: fit-content;
     padding: 0 7.5vw 6vh 7.5vw;
     overflow-x: hidden;
     margin: 0;
-    }
+}
 
-    .header {
+.header {
     height: 10vh;
-    }
+}
 
-    .header__logo {
+.header__logo {
     height: 70%;
-    }
+}
 
-    .header__bar {
+.header__bar {
     display: none;
-    }
+}
 
-    .menu_btn {
+.menu_btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
-    width: 5vh;
+    height: 4vh;
+    width: 4vh;
     background-color: white;
-    top: 2.5vh;
+    top: 2vh;
     right: 7.5vw;
     position: fixed;
     z-index: 3;
-    }
+}
 
-    .menu_btn img {
+.menu_btn img {
     width: 75%;
-    }
+}
 
-    /* ------------------------------ */
-    .hero {
-    position: relative;
-    height: fit-content;
-    padding-top: 7vh;
-    }
-
-    .hero__btn {
+.menu {
     display: flex;
-    flex-direction: column;
-    }
+}
+/* ------------------------------ */
+.hero {
+    position: relative;
+    height: 50vh;
+    padding-top: 10vh;
+}
 
-    .hero__btn a {
+.hero__btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__btn a {
     font-size: var(--fzaII);
-    padding: 1rem 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     box-shadow: 4px 4px 10px #777;
     text-align: center;
-    }
-    /* ------------------------------ */
-
-    .circle {
+}
+/* ------------------------------ */
+.circle {
     height: calc(85vw * 0.6);
     width: 60%;
     position: absolute;
     right: -25%;
-    bottom: -10%;
+    bottom: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+}
 
-    .circle img {
+.circle img {
     width: 70%;
     height: 70%;
     transform: rotate(-20deg);
-    }
-
-
-
-/* Seccion Uno (About) */
-    .Seccion_I {
-    padding: 6vh 7.5vw;
-    grid-template-areas: 
-    "title"
-    "txt";
-    grid-gap: 3rem;
-    grid-template-columns: 1fr;
-    }
-
-    .Seccion_I h1 {
-        font-size: var(--fzh2);
-    }
-
-
-
-/* Seccion Dos (Productos) */
-    .Seccion_II {
-        height: fit-content;
-        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
-    }
-
-    .Seccion_II--title {
-        display: none;
-    }
-
-    .Seccion_II__content {
-        padding: 0;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
-
-    .Seccion_II__content h2 {
-        font-size: var(--fzh2);
-    }
-
-    .Seccion_II__content--txt p {
-        font-size: var(--fzp);
-        margin-bottom: 3rem;
-    }
-
-    .Seccion_II__content--txt a {
-        font-size: var(--fzaII);
-        padding: 1rem 2rem;
-    }
-
+}
 
 
 /* Seccion Tres (Galeria) */
-    .Seccion_III {
-        padding: 6vh 7.5vw;
-        overflow-x: hidden;
-    }
-
-    .Seccion_III img {
-        position: absolute;
-        top: unset;
-        bottom: 6%;
-        left: 55%;
-        width: 41%;
-        height: calc(41vw * 0.549);
-    }
-
-    .Seccion_III__content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-    }
-
-    .Seccion_III__content h2 {
-        font-size: var(--fzh2);
-        margin-bottom: 3rem;
-        justify-self: flex-start;
-    }
-
-    .Seccion_III__content p {
-        margin-bottom: 3rem;
-        width: 75%;
-    }
-
-    .Seccion_III__content a {
-        font-size: var(--fzaII);
-        padding: 1rem 2rem;
-        justify-self: flex-start;
-    }
-
-
-
-/* Seccion Cuatro (Delivery) */
-    .Seccion_IV {
-    padding: 6vh 7.5vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-template-areas:
-    "title"
-    "txt"
-    "bike";
-    }
-
-    .Seccion_IV h2 {
-    margin-bottom: 3rem;
-    justify-self: flex-start;
-    }
-
-    .Seccion_IV p {
-        margin-bottom: 3rem;
-    }
-
-
-
-/* Seccion Cinco (Contacto) */
-    .Seccion_V {
-        padding: 6vh 7.5vw 8vh 7.5vw;
-    }
-
-    .Seccion_V h1 {
-        width: 100%;
-        font-size: var(--fzh2);
-        text-align: start;
-    }
-
-    .Seccion_V__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 6vh 0 0;
-    }
-
-    .Seccion_V__content div {
-        margin-bottom: 3rem;
-        display: flex;
-    }
-
-    .Seccion_V__content h4 {
-        font-size: var(--fzp);
-    }
-
-    .Seccion_V__content a {
-        font-size: var(--fzp);
-    }
-
-
-
-/* Seccion Footer */
-    footer a {
-        font-size: var(--fzp);
-    }
-
+.Seccion_III__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 10rem 5rem;
+    grid-template-areas: 
+    "title title"
+    "txt img"
+    "btn btn";
+    grid-gap: 2rem;
 }
 
-@media only screen and (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+.Seccion_III__content h2 {
+    margin-bottom: 0;
+    align-self: center;
+    justify-self: center;
+}
 
-/* Seccion Cero (Hero) */
-    :root {
-    font-size: 10px;
-    }
+.Seccion_III__content p {
+    align-self: center;
+}
 
-    main {
-    width: 100vw;
-    height: fit-content;
-    padding: 0 5vw 6vh 5vw;
-    overflow-x: hidden;
-    margin: 0;
-    }
+.Seccion_III__content a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+}
 
-    .header {
-    height: 15vh;
-    }
+.Seccion_III img {
+    height: 75%;
+    align-self: center;
+}
 
-    .header__logo {
-    height: 70%;
-    }
+/* Seccion Cuatro (Delivery) */
+.Seccion_IV {
+    padding: 6vh 7.5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "txt bike";
+}
 
-    .header__bar {
-    display: none;
-    }
+.Seccion_IV h2 {
+    margin-bottom: 3rem;
+    justify-self: center;
+}
 
-    .header__bar a {
-        font-size: var(--fzaII);
-        font-family: var(--title);
-        margin-left: 1vw;
-        letter-spacing: 0.05rem;
-        color: black;
-        text-decoration: none;
-        padding: 0.5rem;
-        border: 1px solid rgba(255, 255, 255, 0%);
-    }
-    
-    .menu_btn {
+.Seccion_IV p {
+    margin-bottom: 0;
+    align-self: center;
+}
+
+/* Seccion Cinco (Contacto) */
+.Seccion_V {
+    position: relative;
+    padding: 7vh 7.5vw;
+    padding-bottom: calc(3vw + 4rem);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 8vh;
-    width: 8vh;
+    background: rgb(254,183,72);
+    background: linear-gradient(137deg, rgba(254,183,72,1) 3%, rgba(254,201,118,1) 51%, rgba(255,219,164,1) 100%);
+}
+
+.Seccion_V h1 {
+    font-family: var(--title);
+    font-size: var(--fzh1);
+    font-weight: 100;
+    text-align: center;
+}
+
+.Seccion_V__content {
+    padding-top: 5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "inst"
+    "whats"
+    "mail";
+    justify-items: center;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.Seccion_V__card {
+    width: 50%;
+    height: 100%;
+    box-shadow: 6px 6px 10px #555;
     background-color: white;
-    top: 3.5vh;
-    right: 7.5vw;
-    position: fixed;
+}
+
+.Seccion_V__card p {
+    font-family: var(--button);
+    font-size: 100%;
+    font-weight: 200;
+    text-align: center;
+    user-select: text;
+}
+
+.Seccion_V__card div {
+    padding: 4rem;
+    display: flex;
+    border-top: 2px solid white;
+    background-color: var(--colorI);
+    z-index: 2;
+}
+
+.Seccion_V__card a {
+    display: inline-block;
+    height: 5.2rem;
+    width: 5.2rem;
     z-index: 3;
-    }
+}
 
-    .menu_btn img {
-    width: 60%;
-    }
+.Seccion_V__card span {
+    color: white;
+    font-size: 2rem;
+}
 
-    /* ------------------------------ */
-    .hero {
-    position: relative;
-    height: fit-content;
-    padding-top: 7vh;
-    }
-
-    .hero__btn {
-    display: flex;
-    flex-direction: row;
-    }
-
-    .hero__btn a {
-    font-size: var(--fzaII);
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 4px 4px 10px #777;
-    text-align: center;
-    }
-    /* ------------------------------ */
-
-    .circle {
-    height: calc(85vw * 0.45);
-    width: 45%;
-    position: absolute;
-    right: -15%;
-    bottom: -5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .circle img {
-    width: 70%;
-    height: 70%;
-    transform: rotate(-20deg);
-    }
-
-
-
-/* Seccion Uno (About) */
-    .Seccion_I {
-    padding: 6vh 7.5vw;
-    grid-template-areas: 
-    "title"
-    "txt";
-    grid-gap: 3rem;
-    grid-template-columns: 1fr;
-    }
-
-    .Seccion_I h1 {
-        font-size: var(--fzh2);
-    }
-
-
-
-/* Seccion Dos (Productos) */
-    .Seccion_II {
-        height: fit-content;
-        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
-    }
-
-    .Seccion_II--title {
-        display: none;
-    }
-
-    .Seccion_II__content {
-        padding: 0;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
-
-    .Seccion_II__content h2 {
-        font-size: var(--fzh2);
-    }
-
-    .Seccion_II__content--txt p {
-        font-size: var(--fzp);
-        margin-bottom: 3rem;
-    }
-
-    .Seccion_II__content--txt a {
-        font-size: var(--fzaII);
-        padding: 1rem 1.5rem;
-    }
-
-
-
-/* Seccion Tres (Galeria) */
-    .Seccion_III {
-        padding: 6vh 7.5vw;
-        overflow-x: hidden;
-    }
-
-    .Seccion_III img {
-        position: absolute;
-        top: unset;
-        bottom: 6%;
-        left: 55%;
-        width: 41%;
-        height: calc(41vw * 0.549);
-    }
-
-    .Seccion_III__content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-    }
-
-    .Seccion_III__content h2 {
-        font-size: var(--fzh2);
-        margin-bottom: 3rem;
-        justify-self: flex-start;
-    }
-
-    .Seccion_III__content p {
-        margin-bottom: 3rem;
-        width: 65%;
-    }
-
-    .Seccion_III__content a {
-        font-size: var(--fzaII);
-        padding: 1rem 1.5rem;
-        justify-self: flex-start;
-    }
-
-
-
-/* Seccion Cuatro (Delivery) */
-    .Seccion_IV {
-    padding: 6vh 7.5vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-template-areas:
-    "title"
-    "txt"
-    "bike";
-    }
-
-    .Seccion_IV h2 {
-    margin-bottom: 3rem;
-    justify-self: flex-start;
-    }
-
-    .Seccion_IV p {
-        margin-bottom: 3rem;
-    }
-
-
-
-/* Seccion Cinco (Contacto) */
-    .Seccion_V {
-        padding: 6vh 7.5vw 8vh 7.5vw;
-    }
-
-    .Seccion_V h1 {
-        width: 100%;
-        font-size: var(--fzh2);
-        text-align: start;
-    }
-
-    .Seccion_V__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 6vh 0 0;
-    }
-
-    .Seccion_V__content div {
-        margin-bottom: 3rem;
-        display: flex;
-    }
-
-    .Seccion_V__content h4 {
-        font-size: var(--fzp);
-    }
-
-    .Seccion_V__content a {
-        font-size: var(--fzp);
-    }
-
-
-
-/* Seccion Footer */
-    footer a {
-        font-size: var(--fzp);
-    }
 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) and (orientation: landscape) {
-
-/* Seccion Cero (Hero) */
-    :root {
-    font-size: 20px;
-    }
-
-    main {
-    width: 100vw;
-    height: fit-content;
-    padding: 0 5vw 6vh 5vw;
-    overflow-x: hidden;
-    margin: 0;
-    }
-
-    .header {
-    height: 15vh;
-    }
-
-    .header__logo {
-    height: 70%;
-    }
-
-    .header__bar {
-    display: flex;
-    }
-
-    .header__bar a {
-        font-size: var(--fzaII);
-        font-family: var(--title);
-        margin-left: 1vw;
-        letter-spacing: 0.05rem;
-        color: black;
-        text-decoration: none;
-        padding: 0.5rem;
-        border: 1px solid rgba(255, 255, 255, 0%);
-    }
-    
-    .menu_btn {
-    display: none;
-    }
-
-    /* ------------------------------ */
-    .hero {
-    position: relative;
-    height: fit-content;
-    padding-top: 7vh;
-    }
-
-    .hero__btn {
-    display: flex;
-    flex-direction: row;
-    }
-
-    .hero__btn a {
-    font-size: var(--fzaII);
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 4px 4px 10px #777;
-    text-align: center;
-    }
-    /* ------------------------------ */
-
-    .circle {
-    height: calc(85vw * 0.45);
-    width: 45%;
-    position: absolute;
-    right: -15%;
-    bottom: -5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .circle img {
-    width: 70%;
-    height: 70%;
-    transform: rotate(-20deg);
-    }
-
-
-
-/* Seccion Uno (About) */
-    .Seccion_I {
-    padding: 6vh 7.5vw;
-    grid-template-areas: 
-    "title"
-    "txt";
-    grid-gap: 3rem;
-    grid-template-columns: 1fr;
-    }
-
-    .Seccion_I h1 {
-        font-size: var(--fzh2);
-    }
-
-
-
-/* Seccion Dos (Productos) */
-    .Seccion_II {
-        height: fit-content;
-        padding: 6vh 7.5vw calc(6vh - 3rem) 7.5vw;
-    }
-
-    .Seccion_II--title {
-        display: none;
-    }
-
-    .Seccion_II__content {
-        padding: 0;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
-
-    .Seccion_II__content h2 {
-        font-size: var(--fzh2);
-    }
-
-    .Seccion_II__content--txt p {
-        font-size: var(--fzp);
-        margin-bottom: 3rem;
-    }
-
-    .Seccion_II__content--txt a {
-        font-size: var(--fzaII);
-        padding: 1rem 1.5rem;
-    }
-
-
-
-/* Seccion Tres (Galeria) */
-    .Seccion_III {
-        padding: 6vh 7.5vw;
-        overflow-x: hidden;
-    }
-
-    .Seccion_III img {
-        position: absolute;
-        top: unset;
-        bottom: 6%;
-        left: 55%;
-        width: 41%;
-        height: calc(41vw * 0.549);
-    }
-
-    .Seccion_III__content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-template-areas: 
-        "title"
-        "txt"
-        "btn";
-    }
-
-    .Seccion_III__content h2 {
-        font-size: var(--fzh2);
-        margin-bottom: 3rem;
-        justify-self: flex-start;
-    }
-
-    .Seccion_III__content p {
-        margin-bottom: 3rem;
-        width: 65%;
-    }
-
-    .Seccion_III__content a {
-        font-size: var(--fzaII);
-        padding: 1rem 1.5rem;
-        justify-self: flex-start;
-    }
-
-
-
-/* Seccion Cuatro (Delivery) */
-    .Seccion_IV {
-    padding: 6vh 7.5vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-template-areas:
-    "title"
-    "txt"
-    "bike";
-    }
-
-    .Seccion_IV h2 {
-    margin-bottom: 3rem;
-    justify-self: flex-start;
-    }
-
-    .Seccion_IV p {
-        margin-bottom: 3rem;
-    }
-
-
-
-/* Seccion Cinco (Contacto) */
-    .Seccion_V {
-        padding: 6vh 7.5vw 8vh 7.5vw;
-    }
-
-    .Seccion_V h1 {
-        width: 100%;
-        font-size: var(--fzh2);
-        text-align: start;
-    }
-
-    .Seccion_V__content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 6vh 0 0;
-    }
-
-    .Seccion_V__content div {
-        margin-bottom: 3rem;
-        display: flex;
-    }
-
-    .Seccion_V__content h4 {
-        font-size: var(--fzp);
-    }
-
-    .Seccion_V__content a {
-        font-size: var(--fzp);
-    }
-
-
-
-/* Seccion Footer */
-    footer a {
-        font-size: var(--fzp);
-    }
-
-}
