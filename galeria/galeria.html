@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/portrait.css">
+    <link rel="stylesheet" href="css/landscape.css">
+    <script src="https://kit.fontawesome.com/4cb03296f3.js" crossorigin="anonymous"></script>
     <title>Pelleites</title>
 </head>
 <body>
@@ -18,23 +21,35 @@
 
                 <a href="#about">¿Quiénes Somos?</a>
                 <a href="#productos">Productos</a>
-                <a href="">Galeria</a>
+                <a href="galeria/galeria.html">Galeria</a>
                 <a href="#contacto">Contacto</a>
 
+            </div>
+
+            <div class="menu_btn">
+                <div class="menu_btn-img" id="menu_btn" onclick="cambio()"></div>
             </div>
         </header>
 
 
         <div class="hero">
-            <h1 class="hero__title">LO DULCE DE SERVIR</h1>
+            <h1 class="hero__title">Lo dulce de servir</h1>
 
-            <p class="hero__txt">Conoce nuestros productos</p>
+            <p class="hero__txt">Conoce Nuestros Productos</p>
 
-            <div class="circle">
-                <img src="../icon/Flor.png" alt="">
-            </div>
         </div>
-    
+
+        <div class="circle">
+            <img src="../icon/Flor.png" alt="">
+        </div>
+        
+        
+        <div class="menu" id="menu">
+            <a href="#about" onclick="cambio()">¿Quienes Somos?</a>
+            <a href="#productos" onclick="cambio()">Productos</a>
+            <a href="#galeria" onclick="cambio()">Galeria</a>
+            <a href="#contacto">Contacto</a>   
+        </div>
     </main>
 
 
@@ -43,7 +58,7 @@
     <section class="Seccion_I">
 
         <div class="Seccion_I__content">
-            <h2>¿Que son los <br>brigadeiros?</h2>
+            <h2>¿Que son los brigadeiros?</h2>
 
             <div class="Seccion_I__content--txt">
                 <p>Son un dulce tipico en la cultura gastronomica de Brasil, es comun en todo la region y estan hechos a base de leche condensada y chocolate.<br>
@@ -58,7 +73,7 @@
 
     <!-- Seccion Dos (Galeria) -->
     <section class="Seccion_II" id="#productos">
-        <h2>BRIGADEIROS</h2>
+        <h2>Brigadeiros</h2>
         <div class="Seccion_II__brig">
             <div>
                 <img src="../img/P6.jpeg" alt="">
@@ -80,7 +95,7 @@
             </div>
         </div>
 
-        <h2>ARREGLOS</h2>
+        <h2>Arreglos</h2>
         <div class="Seccion_II__array">
             <div>
                 <img src="../img/P3.png" alt="">
@@ -111,23 +126,39 @@
 
         <div class="Seccion_III__content">
 
-            <div>
-                <h4>Correo: <a href="mailto:infopelleites@gmailcom">Infopelleites@gmail.com</a></h4>
+            <div class="Seccion_III__card">
+                <p>Siguenos en <br>Instagram</p>
+                <div>
+                    <a href="" target="">
+                    <span><i class="fab fa-instagram fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <h4>Instagram: <a href="https://www.instagram.compelleites/">@Pelleites</a></h4>
+            <div class="Seccion_III__card">
+                <p>Escribenos al <br>WhatsApp</p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=584147709992&text=Hola%2C+me+encantaria+disfrutar+de+sus+ricos+brigadeiros+😊&app_absent=0" target="_blank">
+                    <span><i class="fab fa-whatsapp fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <h4>WhatsApp: <a href="https://api.whatsapp.com/sendphone=584147709992&text=Hola%2C+me+encantaria+disfruta+de+sus+ricos+brigadeiros+😊&app_absent=0">+58 414-770 9992</a></h4>   
+            <div class="Seccion_III__card">
+                <p>Comunicate al <br>infopelleites@gmail.com</p>
+                <div>
+                    <a href="mailto:infopelleites@gmail.com">
+                    <span><i class="far fa-envelope fa-3x"></i></span>
+                    </a>
+                </div>
             </div>
-
         </div>
+
 
         <footer>
             <a href="https://hernandezgabriel.com/"target="_blank">Gabriel Hernández 2021 ©</a>
         </footer>
     </section>
+    <script src="./js/galeria.js"></script>
 </body>
 </html>

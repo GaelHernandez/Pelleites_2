@@ -1,0 +1,133 @@
+@media only screen and (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+
+    /* Seccion Cero (Hero) */
+    :root {
+    font-size: 10px;
+    }
+    
+    main {
+    width: 100vw;
+    height: 90vh;
+    padding: 0 5vw 6vh 5vw;
+    overflow-x: hidden;
+    margin: 0;
+    }
+    
+    .header {
+    height: 15vh;
+    }
+    
+    .header__logo {
+    height: 70%;
+    }
+    
+    .header__bar a {
+        font-size: var(--fzaII);
+        font-family: var(--button);
+        margin-left: 1vw;
+        letter-spacing: 0.05rem;
+        color: black;
+        text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0%);
+    }
+    
+    /* ------------------------------ */
+    .hero {
+    position: relative;
+    height: 65vh;
+    padding-top: 7vh;
+    }
+    
+    .hero__btn {
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .hero__btn a {
+    font-size: var(--fzaII);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px #777;
+    text-align: center;
+    }
+    /* ------------------------------ */
+    
+    .circle {
+    height: calc(100vw * 0.35);
+    width: 35%;
+    position: absolute;
+    right: -10%;
+    bottom: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .circle img {
+    width: 85%;
+    height: 85%;
+    transform: rotate(-20deg);
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) and (orientation: landscape) {
+    
+    :root {
+        font-size: 15px;
+    }
+    
+    main {
+        width: 100vw;
+        height: 65vh;
+        padding: 0 5vw 6vh 5vw;
+        overflow-x: hidden;
+        margin: 0;
+    }
+    
+    .header {
+        height: 15vh;
+    }
+    
+    .header__logo {
+        height: 70%;
+    }
+    
+    .header__bar a {
+        font-family: var(--button);
+        font-size: var(--fzaII);
+        margin-left: 1vw;
+        letter-spacing: 0.05rem;
+        color: black;
+        text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0%);
+    }
+    
+    /* ------------------------------ */
+    .hero {
+        position: relative;
+        height: fit-content;
+        padding-top: 7vh;
+    }
+
+    /* ------------------------------ */
+    
+    .circle {
+        height: calc(100vw * 0.40);
+        width: 40%;
+        position: absolute;
+        right: -10%;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .circle img {
+        width: 90%;
+        height: 90%;
+        transform: rotate(-20deg);
+    }
+    
+}

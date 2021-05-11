@@ -7,7 +7,7 @@ font-size: 10px;
 
 main {
 width: 100vw;
-height: fit-content;
+height: 90vh;
 padding: 0 5vw 6vh 5vw;
 overflow-x: hidden;
 margin: 0;
@@ -35,7 +35,7 @@ height: 70%;
 /* ------------------------------ */
 .hero {
 position: relative;
-height: fit-content;
+height: 65vh;
 padding-top: 7vh;
 }
 
@@ -54,10 +54,10 @@ text-align: center;
 /* ------------------------------ */
 
 .circle {
-height: calc(85vw * 0.35);
+height: calc(100vw * 0.35);
 width: 35%;
 position: absolute;
-right: -15%;
+right: -10%;
 bottom: -5%;
 display: flex;
 justify-content: center;
@@ -98,7 +98,7 @@ transform: rotate(-20deg);
 }
 
 .Seccion_III img {
-    height: 75%;
+    height: 100%;
     align-self: center;
 }
 
@@ -125,7 +125,7 @@ transform: rotate(-20deg);
 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) and (max-width: 1359px) and (orientation: landscape) {
 
 :root {
     font-size: 15px;
@@ -133,7 +133,7 @@ transform: rotate(-20deg);
 
 main {
     width: 100vw;
-    height: fit-content;
+    height: 65vh;
     padding: 0 5vw 6vh 5vw;
     overflow-x: hidden;
     margin: 0;
@@ -180,10 +180,10 @@ main {
 /* ------------------------------ */
 
 .circle {
-    height: calc(85vw * 0.35);
-    width: 35%;
+    height: calc(100vw * 0.40);
+    width: 40%;
     position: absolute;
-    right: -15%;
+    right: -10%;
     bottom: -5%;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@ main {
 }
 
 .Seccion_III img {
-    height: 75%;
+    height: 100%;
     align-self: center;
 }
 
