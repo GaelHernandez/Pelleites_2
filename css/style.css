@@ -356,7 +356,7 @@ main {
     grid-area: btn;
     align-self: flex-end;
     justify-self: center;
-    z-index: 2;
+    z-index: 1;
 }
 
 .Seccion_III__content a:hover {
